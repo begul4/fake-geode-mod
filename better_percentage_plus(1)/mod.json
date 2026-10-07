@@ -1,0 +1,90 @@
+{
+	"geode": "5.2.0",
+	"gd": {
+		"win": "2.2081",
+		"android": "2.2081",
+		"mac": "2.2081",
+		"ios": "2.2081"
+	},
+	"id": "custom.better_percentage_plus",
+	"name": "Better Percentage Plus",
+	"version": "v1.0.0",
+	"developer": "you",
+	"description": "Run from and best run next to the percentage, with a toggle to show the % symbol only when playing from 0%",
+	"tags": [
+		"gameplay",
+		"enhancement"
+	],
+	"settings": {
+		"decimals": {
+			"name": "Decimal Places",
+			"description": "Amount of decimal places on the percentage",
+			"type": "int",
+			"default": 2,
+			"min": 0,
+			"max": 10
+		},
+		"show-percent-symbol": {
+			"name": "Show Percent Symbol",
+			"type": "bool",
+			"default": true
+		},
+		"percent-symbol-only-from-zero": {
+			"name": "Percent Symbol Only From 0%",
+			"description": "Shows the % symbol when playing from 0%, and hides it when playing from a startpos",
+			"type": "bool",
+			"default": false,
+			"enable-if": "show-percent-symbol"
+		},
+		"seperators-with-spacing": {
+			"name": "Seperators With Spacing",
+			"description": "Adds spaces around seperators",
+			"type": "bool",
+			"default": false,
+			"enable-if": "show-run-from || show-best-run"
+		},
+
+		"run-from-settings-title": {
+			"name": "Run From Settings",
+			"type": "title"
+		},
+		"show-run-from": {
+			"name": "Show Run From",
+			"description": "Shows the run start next to the progress percentage",
+			"type": "bool",
+			"default": true
+		},
+		"hide-run-from-from-zero": {
+			"name": "Hide Run From From Zero",
+			"description": "Hides the run start when playing from 0%",
+			"type": "bool",
+			"default": true,
+			"enable-if": "show-run-from"
+		},
+
+		"best-run-settings-title": {
+			"name": "Best Run Settings",
+			"type": "title"
+		},
+		"show-best-run": {
+			"name": "Show Best Run",
+			"description": "Shows the best run next to the progress percentage",
+			"type": "bool",
+			"default": true
+		},
+		"hide-best-run-from-zero": {
+			"name": "Hide Best Run From Zero",
+			"description": "Hides the best run when playing from 0%",
+			"type": "bool",
+			"default": false,
+			"enable-if": "show-best-run"
+		},
+		"show-level-best-from-zero": {
+			"name": "Show Level Best From Zero",
+			"description": "Shows the level best instead of best run when playing from 0%",
+			"type": "bool",
+			"default": true,
+			"enable-if": "show-best-run && !hide-best-run-from-zero"
+		}
+	}
+}
